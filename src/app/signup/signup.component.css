@@ -1,0 +1,193 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #cf12c0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#head-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.login-field label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    color: #141212;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 17px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+}
+
+#showPassword {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #141212;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-1 {
+    background-color: #007bff;
+    color: white;
+}
+
+.button-1:disabled {
+    background-color: #ccc;
+    color: #141212;
+    cursor: not-allowed;
+}
+
+.button-1:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.btn-login p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e7e9ebea;
+}
+
+.btn-login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-login a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    #head-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .input-field {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .btn-login p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    #head-title {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .input-field {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 19px;
+        padding: 12px;
+    }
+
+    .btn-login p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        padding: 25px;
+    }
+
+    #head-title {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .btn-login p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 600px;
+        padding: 20px;
+    }
+
+    #head-title {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .btn-login p {
+        font-size: 18px;
+    }
+}

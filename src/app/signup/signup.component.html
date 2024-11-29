@@ -1,0 +1,80 @@
+<app-loader *ngIf="isLoading"></app-loader>
+<div class="alert alert-success" role="alert" *ngIf="isSuccess" [ngStyle]="{'width':'100%'}">
+    {{successMessage}}
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="isError" [ngStyle]="{'width':'100%'}">
+    {{errorMessage}}
+</div>
+
+<div class="container">
+    <form class="form" #signupForm="ngForm" (ngSubmit)="onSignupFormSubmit(signupForm)" *ngIf="!isLoading">
+        <p id="head-title">Create A New Account</p>
+
+        <div class="login-field">
+            <label>Name: <br> <i class="input-icon fa-solid fa-user"></i></label>
+            <input type="text" 
+                class="input-field" 
+                placeholder="Enter Your Name"
+                name="name"
+                ngModel
+                required>
+        </div>
+
+        <div class="login-field">
+            <label>Email Address: <br> <i class="input-icon fa-solid fa-envelope"></i></label>
+            <input type="email" 
+                class="input-field" 
+                placeholder="Enter Your Email"
+                name="email"
+                ngModel
+                required
+                email>
+        </div>
+
+        <div class="login-field">
+            <label>Enter PassWord: <br> <i class="input-icon fa-solid fa-lock"></i></label>
+            <input type="password" 
+                class="input-field" 
+                placeholder="Enter PassWord" 
+                name="password" 
+                ngModel 
+                required
+                minlength="6" 
+                [type]="isPasswordVisible ? 'text' : 'password'">
+            <i id="showPassword" 
+                class="fa-solid" 
+                [ngClass]="isPasswordVisible ? 'fa-eye' : 'fa-eye-slash'" 
+                (click)="showPassword()"></i>
+        </div>
+
+        <div class="login-field">
+            <label>Confirm PassWord: <br> <i class="input-icon fa-solid fa-key"></i></label>
+            <input type="password" 
+                class="input-field" 
+                placeholder="Confirm PassWord" 
+                name="confirmPassword" 
+                ngModel 
+                required
+                minlength="6" 
+                [type]="isPasswordVisible ? 'text' : 'password'">
+            <i id="showPassword" 
+                class="fa-solid" 
+                [ngClass]="isPasswordVisible ? 'fa-eye' : 'fa-eye-slash'" 
+                (click)="showPassword()"></i>
+        </div>
+        
+
+        <div class="btn">
+            <button class="button-1"
+            type="submit"
+            [disabled]="signupForm.invalid"
+            >SignUp
+            </button>
+        </div>
+
+        <div class="btn-login">
+            <p>Already have an account? <a routerLink="/login" (click)="onSignupSwitchMode()">Log in</a></p> 
+        </div>
+        
+    </form>
+</div>

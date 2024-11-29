@@ -1,0 +1,31 @@
+<app-loader *ngIf="isLoading"></app-loader> 
+<div class="alert alert-success" role="alert" *ngIf="isSuccess" [ngStyle]="{'width':'100%'}">
+  {{successMessage}}
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="isError" [ngStyle]="{'width':'100%'}">
+  {{errorMessage}}
+</div>
+
+<div class="container">
+  <table *ngIf="!isLoading && users.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <div *ngIf="!isLoading && users.length === 0" [ngStyle]="{'color':'red', 'font-size':'20px'}">
+    No users found.
+  </div>
+</div>

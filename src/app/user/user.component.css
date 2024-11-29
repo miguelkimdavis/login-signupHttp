@@ -1,0 +1,106 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #50042e;
+    color: #fff;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px 15px;
+  }
+  
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #21aab4;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #011011;
+    color: #fff;
+  }
+  
+  tbody tr:hover {
+    background-color: #cc0d0d;
+    color: #e9e2e7;
+    cursor: pointer;
+  }
+
+  .error-message, .success-message {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    background-color: #dc3545;
+  }
+  
+  .success-message {
+    background-color: #28a745;
+  }
+
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 10px 12px;
+    }
+  
+    thead {
+      display: none; 
+    }
+  
+    tbody, tbody tr, tbody td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 10px;
+      border: 1px solid #ddd;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      padding-right: 10px;
+    }
+  
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    tbody tr:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    table {
+      font-size: 12px;
+    }
+  
+    th, td {
+      padding: 8px 10px;
+    }
+  }
+  

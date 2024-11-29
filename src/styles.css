@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,400;1,600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+body{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+.alert {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.alert-success {
+    background-color: #07d337;
+    color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-success:hover {
+    background-color: #155724;
+    color: #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #df081d;;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-danger:hover {
+    background-color: #721c24;
+    color: #f5c6cb;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
